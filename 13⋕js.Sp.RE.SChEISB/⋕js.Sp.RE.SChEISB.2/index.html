@@ -3,7 +3,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-    <title>⋕js.Sp.RE.ESCh.6</title>
+    <title>⋕js.Sp.RE.SChEISB.2</title>
 	</head>
 	<body>
      
@@ -12,9 +12,10 @@
 
         let str = '[abc] {abc} abc (abc) [abc]';
 
-        console.log(str.replace(/\[\w+\]/g, '!'));
-    
+        console.log(str.replace(/\[abc\]|\(abc\)|\{abc\}/g, '!'));
+		//console.log(str.replace(/\(abc\)+/g, '!'));
 	</script>
     
 	</body>
 </html>
+
