@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.RE.RMC.2</title>
+	</head>
+	<body>
+     
+
+	<script>
+        
+        let str = '123 456 789';
+
+        let result = str.replace(/\d{3}/g, function (match){
+            return match.split('').reverse().join('');
+        });
+
+        console.log(result);
+      
+	
+	</script>
+    
+	</body>
+</html>
+

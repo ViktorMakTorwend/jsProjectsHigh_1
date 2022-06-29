@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.RE.RDP.2</title>
+	</head>
+	<body>
+     
+
+	<script>
+        
+        let str = 'sss site.ru zzz site.com kkk';
+        let res = str.replace(/(\w+\.)[a-z]{2,3}/g, '<a href="http://$&">$&</a>');
+
+        console.log(res);
+      
+	
+	</script>
+    
+	</body>
+</html>
+
