@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr6</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+    
+        // primary functions
+
+        function getArrRandom(parNum){
+            let res = [];
+            for (let i = 0; i < parNum; i++){
+                res.push(getRandomInt(1, 10));
+            }
+
+            getSumElOfArr (res);
+            //console.log(res['func']());
+
+            return res; 
+        }
+
+        function crossArrs (parArr1, parArr2){
+            let res = [];
+            for (let el of parArr1){
+                if(crossElArr(el,parArr2)) {res.push(el)}
+            }
+
+            getSumElOfArr (res);
+            //console.log(res['func']());
+
+            return res;
+        }
+
+        // secondary functions    
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function crossElArr (parNum, parArr){
+            for(let el of parArr){
+                if(el == parNum){return true}
+            }
+        }
+
+        function getSumElOfArr (parArr){
+            let func = Symbol.for('getSumNums');
+            let sum = 0;
+            parArr['func'] = function (){
+                for(let el of this){
+                    sum += Number(el);
+                }
+                return sum;
+            }
+        }
+
+        // testing functions
+
+        let arr1 = [1, 2, 3, 4, 5, 7, 11];
+        let arr2 = [1, 3, 6, 7, 4, 10];
+        crossArrs(arr1, arr2);
+        getArrRandom(10);
+      })();
+      
+	</script>
+    
+	</body>
+</html>

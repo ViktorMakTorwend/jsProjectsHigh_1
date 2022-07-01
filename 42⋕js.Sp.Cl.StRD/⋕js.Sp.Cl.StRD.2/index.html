@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.StRD.2</title>
+    
+	</head>
+	<body>
+        
+        <p>text1</p>
+        <p>text2</p>
+        <p>text3</p>
+
+        <button>Push</button>
+
+
+	<script>
+       
+      ;(function (){
+        let ps = document.querySelectorAll('p');
+        let btn = document.querySelector('button');
+        let set = new Set;
+
+       
+        for(let p of ps){
+            p.addEventListener('click', function(){
+                set.add(p);
+            })
+        }
+
+        btn.addEventListener('click', function (){
+            for (let el of set){
+                el.textContent += '!';
+            }
+        })
+
+      })();
+      
+	</script>
+    
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.JnTS.3</title>
+    
+	</head>
+	<body>
+
+	<script>
+      
+        ;(function (){
+
+            let json = '["user1","user2","user3","user4","user5"]';
+
+            let body = document.querySelector('body');
+            let ul = document.createElement('ul');
+            body.appendChild(ul);
+
+            let arrUsers = JSON.parse(json);
+            for (let user of arrUsers){
+                let li = document.createElement('li');
+                li.textContent = user;
+                ul.appendChild(li);
+            }
+
+        })();
+      
+	</script>
+    
+	</body>
+</html>

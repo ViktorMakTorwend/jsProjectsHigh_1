@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.4</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+        
+        function *createIterator () {
+           yield 1;
+           yield 2;
+           yield 3;
+        }
+
+        let iterator = createIterator ();
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+        console.log(iterator.next().value);
+
+      })();
+      
+	</script>
+    
+	</body>
+</html>

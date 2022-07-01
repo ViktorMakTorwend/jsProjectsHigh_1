@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.19</title>
+    
+	</head>
+	<body>
+
+        <p>text1</p>
+        <p>text2</p>
+        <p>text3</p>
+
+	<script>
+       //Дана коллекция DOM элементов. Преобразуйте ее в массив.
+      ;(function (){
+
+        let ps = document.querySelectorAll('p');
+        let map = new Map;
+
+        for(let p of ps){
+            map.set(p, p.textContent);
+        }
+
+        console.log(map);
+        let arrOfTegs = [...map];
+        console.log(arrOfTegs);
+    
+      })();
+      
+	</script>
+    
+	</body>
+</html>

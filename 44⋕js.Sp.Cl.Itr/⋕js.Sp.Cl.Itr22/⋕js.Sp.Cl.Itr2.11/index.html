@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.11</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+
+        let obj = {
+        a:1,
+        b:2,
+        c:3,
+        d:4
+       }
+
+       function * createIterator (parObj){
+            for (let key in parObj){
+                yield parObj[key];
+            }
+       }
+
+       let iterator = createIterator(obj);
+            for (let elem of iterator){
+                console.log(elem);
+            }
+            
+      })();
+      
+	</script>
+    
+	</body>
+</html>

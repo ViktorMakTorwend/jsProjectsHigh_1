@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.JnTS.2</title>
+    
+	</head>
+	<body>
+
+	<script>
+      
+        ;(function (){
+
+            let json = `{
+                "data1": [1,2,3],
+                "data2": [4,5,6],
+                "data3": [7,8,9]
+            }`;
+
+            // так как json это строка то обычным методом перебора результат не получишь
+            /* for (let key in json){
+                console.log(json[key]);
+            } */
+
+            let obj = JSON.parse(json);
+            let sum = 0;
+
+            // добавляем в объект генератор итератора
+            obj[Symbol.iterator] = function *(){
+                for(let key in this){
+                    for(let el of this[key])
+                        yield el;
+                }
+            }
+
+            for (let el of obj){
+                sum += +el;
+            }
+
+            console.log(sum);
+
+        })();
+      
+	</script>
+    
+	</body>
+</html>

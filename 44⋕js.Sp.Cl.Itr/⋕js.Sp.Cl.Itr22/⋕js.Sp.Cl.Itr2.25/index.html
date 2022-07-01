@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.25</title>
+    
+	</head>
+	<body>
+
+        <p>text</p>
+        <p>text</p>
+        <p>text</p>
+
+        <button>Push</button>
+
+	<script>
+      
+        ;(function (){
+
+        let ps = document.querySelectorAll('p');
+        let btn = document.querySelector('button');
+        let entrs = ps.entries();
+
+        
+        btn.addEventListener('click', function (){
+            for (let [num, elem] of entrs){
+                elem.textContent += num;
+            }
+        })
+    
+        })();
+      
+	</script>
+    
+	</body>
+</html>

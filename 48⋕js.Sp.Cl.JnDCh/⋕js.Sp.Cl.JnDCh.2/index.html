@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.JnDCh.2</title>
+	</head>
+	<body>
+
+
+	<script>
+      
+        ;(function (){
+
+            let json = '["user1","user2","user3","user4","user5"]';
+            let arr = JSON.parse(json);
+            arr.splice(1, 1, 'userNew');
+            let res = JSON.stringify(arr);
+            console.log(res);
+
+
+            
+        })();
+      
+	</script>
+    
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.JnTS.4</title>
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+	<script>
+      
+        ;(function (){
+
+            let json = `[
+                {
+                    "name": "user1",
+                    "age": 25,
+                    "salary": 1000
+                },
+                {
+                    "name": "user2",
+                    "age": 26,
+                    "salary": 2000
+                },
+                {
+                    "name": "user3",
+                    "age": 27,
+                    "salary": 3000
+                }
+            ]`;
+
+            let obj = JSON.parse(json);
+            obj[Symbol.iterator] = function *(){
+                for (let objUser in obj){         
+                    yield obj[objUser];
+                }
+            }
+
+            let body = document.querySelector('body');
+            let table = document.createElement('table');
+            body.appendChild(table);
+
+            for (let note of obj ){
+                let tr = document.createElement('tr');
+                for (let data in note){
+                    let td = document.createElement('td');
+                    td.textContent = note[data];
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+            
+        })();
+      
+	</script>
+    
+	</body>
+</html>

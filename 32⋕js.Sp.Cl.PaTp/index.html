@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.PaTp.1</title>
+	</head>
+	<body>
+     
+        <div>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+        </div>
+        
+	<script>
+       
+      ;(function (){
+        let div = document.querySelector('div');
+        let el1 = document.querySelectorAll('p');     // NodeList
+        let el2 = document.getElementsByTagName('p'); // HTMLCollection
+        let ps1 = div.childNodes;
+        let ps2 = div.children;
+
+        let p = document.createElement('p');
+        div.appendChild(p);
+
+        console.log(ps1);
+        console.log(ps2);
+        console.log(el1);
+        console.log(el2);
+        // в обоих методах тип колекции - HTMLCollection
+      })();
+      
+	</script>
+    
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.PaCn.1</title>
+	</head>
+	<body>
+     
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+	<script>
+        
+      let ps = document.querySelectorAll('p');
+
+      ;(function getArrFromPsevdArr1 (){
+        let arr = [];
+        for (let el of ps){
+            arr.push(el);
+        }
+        console.log(arr);
+      })();
+
+      ;(function getArrFromPsevdArr2 (){
+        let arr2 = [...ps];
+       
+        console.log(arr2);
+      })();
+
+      ;(function getArrFromPsevdArr3 (){
+        let arr3 = Array.from(ps);
+       
+        console.log(arr3);
+      })();
+
+	
+	</script>
+    
+	</body>
+</html>

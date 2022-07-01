@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr4</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+        let arr = [1, 2, 3];
+        let func = Symbol('function to get sum of els of arr');
+        let sum = 0;
+
+        arr['func'] = function (){
+            for (let el of this){
+                sum += el;
+            }
+            return sum;
+        }
+
+        console.log(arr['func']());
+
+      })();
+      
+	</script>
+    
+	</body>
+</html>

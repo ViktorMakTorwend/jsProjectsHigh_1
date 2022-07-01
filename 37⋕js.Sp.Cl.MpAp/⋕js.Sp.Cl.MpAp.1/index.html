@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.MpAp.1</title>
+    <link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+        
+        <div>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+        </div>
+
+	<script>
+       
+      ;(function (){
+        let inps = document.querySelectorAll('input');
+        let map = new Map;
+
+        let i = 0;
+        for (let inp of inps){
+            map.set(inp, ++i);
+        }
+
+        for (let inp of inps){
+            inp.addEventListener('click', function(){
+                this.value = map.get(this);
+            })
+        }
+      })();
+      
+	</script>
+    
+	</body>
+</html>

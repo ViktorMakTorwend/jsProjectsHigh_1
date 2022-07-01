@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+        let obj = {1:'a', 2:'b', 3:'c'};
+        let symb = Symbol('function to output "!"');
+    
+        obj[symb] =function (){alert('!')};
+
+        for(let key in obj){
+            console.log(obj[key]);
+        }
+      })();
+      
+	</script>
+    
+	</body>
+</html>

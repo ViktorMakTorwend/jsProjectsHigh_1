@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.21</title>
+    
+	</head>
+	<body>
+
+	<script>
+      
+      ;(function (){
+
+       let obj = {
+        a:1, 
+        b:2, 
+        c:3,
+        *[Symbol.iterator] (){
+            for (let key in this){
+                yield key;
+            }
+        }
+    };
+
+       let arr = [...obj];
+       console.log(arr);
+    
+      })();
+      
+	</script>
+    
+	</body>
+</html>

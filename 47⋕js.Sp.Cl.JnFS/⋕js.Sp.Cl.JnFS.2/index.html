@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.JnFS.2</title>
+	</head>
+	<body>
+
+        <ul>
+            <li>city1</li>
+            <li>city2</li>
+            <li>city3</li>
+            <li>city4</li>
+        </ul>
+
+	<script>
+      
+        ;(function (){
+
+            let ul = document.querySelector('ul');
+            let lis = ul.querySelectorAll('li');
+
+            let arr = [];
+            for (let li of lis){
+                arr.push(li.textContent);
+            }
+             
+            let json = JSON.stringify(arr);
+            console.log(json);
+            
+        })();
+      
+	</script>
+    
+	</body>
+</html>

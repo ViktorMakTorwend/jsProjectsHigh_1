@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.17</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+
+        let str = 'Hello world';
+        let ul = document.createElement('ul');
+        let body = document.querySelector('body');
+        body.appendChild(ul);
+        for (let el of str){
+            let li = document.createElement('li');
+            li.textContent = el;
+            ul.appendChild(li);
+        }
+    
+      })();
+      
+	</script>
+    
+	</body>
+</html>

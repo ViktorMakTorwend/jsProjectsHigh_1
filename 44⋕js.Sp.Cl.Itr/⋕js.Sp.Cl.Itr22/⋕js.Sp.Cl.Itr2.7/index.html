@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.7</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+
+        let arr = [1, 2, 3];
+        
+        function *createIterator (parArr) {
+            for (let i = parArr.length; i > 0; i--){
+                yield parArr[i-1];
+            }
+        }
+
+        let iterator = createIterator(arr);
+            console.log(iterator.next().value);
+            console.log(iterator.next().value);
+            console.log(iterator.next().value);
+            
+      })();
+      
+	</script>
+    
+	</body>
+</html>

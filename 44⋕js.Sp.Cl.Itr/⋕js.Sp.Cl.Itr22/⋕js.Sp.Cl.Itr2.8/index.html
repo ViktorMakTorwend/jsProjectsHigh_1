@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr2.8</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+
+        let arr = [1, 2, 3];
+        
+        function *createIterator (parArr) {
+            let arrLen = parArr.length;
+            for (let i = 0; i < arrLen; i++){
+                let res = [];
+                if (arrLen - i >= 2){
+                    res.push(parArr[i]);
+                    res.push(parArr[i+1]);
+                }
+                else {res.push(parArr[i])}
+                yield res;
+            }
+        }
+
+        let iterator = createIterator(arr);
+            console.log(iterator.next());
+            console.log(iterator.next());
+            console.log(iterator.next());
+            console.log(iterator.next());
+          
+            
+      })();
+      
+	</script>
+    
+	</body>
+</html>

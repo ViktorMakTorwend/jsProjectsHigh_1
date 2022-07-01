@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Cl.Itr3</title>
+    
+	</head>
+	<body>
+
+	<script>
+       
+      ;(function (){
+        let obj = {
+            a: 1, 
+            b: 2, 
+            c: 3,
+        }
+        
+        let func = Symbol('function to get sum of els of our obj');
+        let sum = 0;
+
+        obj[func] = function (){
+            for (let key in this){
+                sum += this[key];
+            } 
+            return sum;
+        };  
+
+        console.log(obj[func]());
+
+      })();
+      
+	</script>
+    
+	</body>
+</html>
