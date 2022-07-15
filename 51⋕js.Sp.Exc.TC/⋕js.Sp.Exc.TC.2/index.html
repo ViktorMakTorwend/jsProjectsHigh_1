@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.TC.3</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+            let arr = ['London', 'Moscow', 'Paris'];
+
+            try {
+                toDoArrtoJson (arr);
+                createListOfCities ();
+            } catch (error) {
+                alert ('Not correct json-data')
+            }
+                
+        })();
+
+        // not correct, programmer foggot to convert arr to json 
+        function toDoArrtoJson (parArr) {
+            localStorage.setItem('cities', parArr);
+        }
+        
+        // corect 
+        /* function toDoArrtoJson (parArr) {
+            let json = JSON.stringify(parArr);
+            localStorage.setItem('cities', json);
+        }  */
+
+        
+        function createListOfCities (){
+            let body = document.querySelector('body');
+            let ul = document.createElement('ul');
+            body.appendChild(ul);
+
+            let arr = JSON.parse(localStorage.getItem('cities'));
+            for (let el of arr){
+                let li = document.createElement('li');
+                li.textContent = el;
+                ul.appendChild(li);
+            }
+        }
+
+	</script>
+    
+	</body>
+</html>

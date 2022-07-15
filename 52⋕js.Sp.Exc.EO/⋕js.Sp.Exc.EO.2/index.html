@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.EO.2</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+
+            let arr = [];
+                for (let i = 1; i < 6*10**6; i++){
+                    arr.push(i);
+                }
+           
+            try {
+
+                localStorage.setItem('arr', arr);
+
+            } catch (error) {
+                console.log(error.name);
+                console.log(error.message);
+            }
+      
+        })();
+
+	</script>
+    
+	</body>
+</html>

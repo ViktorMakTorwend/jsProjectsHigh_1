@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.Thr.3</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+            let flag = true;
+
+            try {
+                if (flag){
+                    throw new SyntaxError('syntax error');
+                }
+                else {
+                    throw new RangeError('tex error');
+                }
+                
+            } catch (error) {
+                if (error.name == "SyntaxError") {
+                    console.log( 'It is a syntax error');
+                }
+                if (error.name == "RangeError") {
+                    console.log( 'It is a range error');
+                }
+                
+            }
+      
+        })();
+
+	</script>
+    
+	</body>
+</html>

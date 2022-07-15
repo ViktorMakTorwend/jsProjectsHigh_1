@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.Bs.6</title>
+	</head>
+	<body>
+
+	<script>
+
+        ;(function (){
+
+            let data = localStorage.getItem('data');
+
+            if (data){
+                let num = localStorage.getItem('data');
+                if (num < 10){
+                    alert('You entered ' + (++num) + ' times.');
+                    localStorage.setItem('data', num);
+                }
+                else {
+                    num = 1;
+                    localStorage.setItem('data', num);
+                    alert('You entered first time');
+                }
+            }
+            else { 
+                let count = 1;
+                localStorage.setItem('data', count);
+                alert('You entered first time')
+                
+            }
+            
+            //localStorage.clear();
+        })();
+      
+	</script>
+    
+	</body>
+</html>

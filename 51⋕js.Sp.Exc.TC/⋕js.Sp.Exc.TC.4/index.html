@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.TC.4</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+            let json = '{1,2,3,4,5}';
+
+            // by convert 'arr' to 'json' can appear an error
+            try {
+                let arr = JSON.parse(json);
+                let sum = 0;
+                    for (let elem of arr) {
+                        sum += +elem;
+                    }
+                alert(sum);
+
+            } catch (error) {
+                alert ('Not correct json-data')
+            }
+ 
+           
+                
+        })();
+
+	</script>
+    
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.Thr.5</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+           
+            let num;
+            function getSquareRoot(parNum){
+                if (parNum >= 0)
+                    console.log(Math.sqrt(parNum));
+                else { throw {name: 'GetSquareRootFromNegNumError', message: "Don't try to get root from negative num"};}    
+            }
+            
+           
+            try {
+                num = -4;
+                getSquareRoot(num);
+
+            } catch (error) {
+                console.log(error.name); 
+	            console.log(error.message); 
+            }
+      
+        })();
+
+	</script>
+    
+	</body>
+</html>

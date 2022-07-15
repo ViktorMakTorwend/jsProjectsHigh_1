@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.Bs.3</title>
+	</head>
+	<body>
+
+        <div>
+            <p>Input your birthday </p>
+            <input id="brMonth" type="text" placeholder="month">
+            <input id="brDay" type="text" placeholder="day">
+        </div>
+
+	<script>
+      brDay
+        ;(function (){
+
+            let div = document.querySelector('div');
+
+            let inpBrMonth = div.querySelector('#brMonth')
+            let inpBrDay = div.querySelector('#brDay'); 
+
+            let birthday = localStorage.getItem('brDay');
+
+            if (birthday){
+                let month = new Date().getMonth();
+                let day = new Date().getDate();
+                let brDay = localStorage.getItem('brDay');
+                let brMon = localStorage.getItem('brMonth');
+                    if (day == brDay && month == brMon){
+                            console.log('Happy birthday');
+                    }
+                    else {console.log('Today is not your birthday')}
+            } 
+            else {
+                inpBrDay.addEventListener('keydown', function(event){
+                    if (event.code == 'Enter'){
+                        localStorage.setItem('brDay', inpBrDay.value);
+                        localStorage.setItem('brMonth', Number(inpBrMonth.value) - 1);
+                }
+            })
+            }
+            //localStorage.clear();
+        })();
+      
+	</script>
+    
+	</body>
+</html>

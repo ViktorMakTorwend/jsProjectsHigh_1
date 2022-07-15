@@ -1,0 +1,20 @@
+{
+  "name": "js.sp.mcm.inr.1",
+  "version": "1.0.0",
+  "description": "Task for Common js Trepachev",
+  "main": "index.js",
+    "type" : "module",
+    "scripts": {
+      "build": "webpack"
+    },
+
+  "author": "Vik Mak",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  } 
+}

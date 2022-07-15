@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.AO.3</title>
+	</head>
+	<body>
+
+        <div>
+            <input type="text" id="surname" placeholder="surname">
+            <input type="text" id="name" placeholder="name">
+            <input type="text" id="age" placeholder="age">
+            <button>Push</button>
+        </div>
+        
+
+	<script>
+        ;(function (){
+
+            if (localStorage.getItem('users')){
+                createNewUser ();  
+                //testListUsers (); 
+            }
+            else { 
+                createArrUsers ();
+                createNewUser ();  
+                //testListUsers ();
+             }
+            
+        })();
+
+        function createNewUser (){
+            let div = document.querySelector('div');
+            let inps = div.querySelectorAll('input');
+            let btn = div.querySelector('button');
+            let arrFIO = JSON.parse(localStorage.getItem('users'));
+
+            btn.addEventListener('click', function(){
+                let fio = {};
+                for (let inp of inps){
+                    fio[inp.id] = inp.value;
+                }
+                arrFIO.push(fio);
+                console.log(arrFIO)
+                localStorage.setItem('users', JSON.stringify(arrFIO));
+            })
+
+        }
+
+        function createArrUsers (){
+            let users = [
+                {
+                    surname: 'surname1',
+                    name: 'name1',
+                    age: 31,
+                },
+                {
+                    surname: 'surname2',
+                    name: 'name2',
+                    age: 32,
+                },
+                {
+                    surname: 'surname3',
+                    name: 'name3',
+                    age: 33,
+                },
+            ];
+
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+
+        function testListUsers (){
+            console.log(JSON.parse(localStorage.getItem('users'))) 
+        }
+        
+      
+	</script>
+    
+	</body>
+</html>

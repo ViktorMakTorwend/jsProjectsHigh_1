@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.Thr.7</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+
+            // right json element - array
+             let json = `[
+                {
+                    "name": "user1",
+                    "age": 25,
+                    "salary": 1000
+                },
+                {
+                    "name": "user2",
+                    "age": 26,
+                    "salary": 2000
+                },
+                {
+                    "name": "user3",
+                    "age": 27,
+                    "salary": 3000
+                }
+            ]`;  
+
+            // right json element - object   
+            let json2 = `{"a":"aaa","b":"bbb","c":"ccc"}`;        
+        
+            // wrong json element - object
+            let json3 = `{"a":aaa,"b":bbb,"c":ccc}`;  
+           
+            try {
+                let userList = JSON.parse(json);
+                //let userList = JSON.parse(json2);
+                //let userlist = JSON.parse(json3);
+
+                console.log(userList);
+
+                if(!Array.isArray(userList)){
+                   throw {
+                    name: 'testArrayError',
+                    message: 'This element is not array'
+                   }
+                }
+             
+            } 
+            catch (error) {
+                if (error.name == 'SyntaxError') {
+                    alert ('Wrong json format of data');
+                } else if (error.name == 'testArrayError') {
+                    alert (error.message);
+                }   
+            }    
+
+        })();
+
+	</script>
+    
+	</body>
+</html>

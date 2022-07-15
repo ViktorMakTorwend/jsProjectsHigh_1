@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.Bs.4</title>
+	</head>
+	<body>
+
+        <div>
+            <p>Input your data </p>
+            <input id="inData" type="text">
+        </div>
+
+	<script>
+
+        ;(function (){
+
+            let div = document.querySelector('div');
+            let inp = div.querySelector('#inData');
+
+            let data = localStorage.getItem('data');
+
+            if (data){
+                inp.value = localStorage.getItem('data');
+            }
+            else {
+                inp.addEventListener('blur', function (){
+                    localStorage.setItem('data', inp.value);
+                })
+            }
+
+            //localStorage.clear();
+        })();
+      
+	</script>
+    
+	</body>
+</html>

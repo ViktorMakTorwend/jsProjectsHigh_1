@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.TC.1</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+
+            try {
+                /* let str = 'некая строка';
+                localStorage.setItem('key', str);
+                alert ('All ok') */
+
+                let str = '';
+                for (let i = 1; i <= 6 * 10 ** 6; i++) { // формируем строку более 5 мб
+                    str += '+';
+                }
+                localStorage.setItem('key', str)
+
+            } catch (error) {
+                alert ('The storage is out of limit')
+            }
+                
+        })();
+      
+	</script>
+    
+	</body>
+</html>

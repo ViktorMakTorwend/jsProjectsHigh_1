@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.AO.2</title>
+	</head>
+	<body>
+
+        <div>
+            <input type="text" id="name" placeholder="name">
+            <input type="text" id="patr" placeholder="patronymic">
+            <input type="text" id="sur" placeholder="surname">
+            <button>Push</button>
+        </div>
+        
+
+	<script>
+        
+        ;(function (){
+            let div = document.querySelector('div');
+            let inps = div.querySelectorAll('input');
+            let btn = div.querySelector('button');
+            let objFIO = {};
+
+            btn.addEventListener('click', function(){
+                for (let inp of inps){
+                    objFIO[inp.id] = inp.value;
+                }
+                localStorage.setItem('objFIO', JSON.stringify(objFIO));
+            })
+
+            let res = localStorage.getItem('objFIO');
+            let objFIO_saved = JSON.parse(res);
+            for (let inp of inps){
+                inp.value = objFIO_saved[inp.id];
+            }
+           
+        })();
+      
+	</script>
+    
+	</body>
+</html>

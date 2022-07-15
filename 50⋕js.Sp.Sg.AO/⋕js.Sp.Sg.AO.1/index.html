@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.AO.1</title>
+	</head>
+	<body>
+
+        <div>
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <button>Push</button>
+        </div>
+        
+
+	<script>
+        
+        ;(function (){
+            let div = document.querySelector('div');
+            let inps = div.querySelectorAll('input');
+            let btn = div.querySelector('button');
+            let arr = [];
+
+            btn.addEventListener('click', function(){
+                for (let inp of inps){
+                    arr.push(inp.value);
+                }
+                localStorage.setItem('arr', JSON.stringify(arr));
+
+                //let res = localStorage.getItem('arr');
+                //console.log(JSON.parse(res));
+            })
+
+           
+            
+
+        })();
+      
+	</script>
+    
+	</body>
+</html>

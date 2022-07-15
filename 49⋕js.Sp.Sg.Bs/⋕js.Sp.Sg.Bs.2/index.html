@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Sg.Bs.2</title>
+	</head>
+	<body>
+
+
+	<script>
+      
+        ;(function (){
+
+            let time = localStorage.getItem('time');
+            
+            if (!time){
+                let firstEnt = new Date().getTime();
+                localStorage.setItem('time', firstEnt);
+            }
+            else {
+                let now = new Date();
+                console.log('you were here ' + (Math.round((now - time)/1000)) + ' second ago');
+                localStorage.clear(); 
+            }
+
+        })();
+      
+	</script>
+    
+	</body>
+</html>

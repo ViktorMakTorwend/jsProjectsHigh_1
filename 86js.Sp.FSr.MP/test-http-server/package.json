@@ -1,0 +1,9 @@
+{
+	"type": "module",
+	"dependencies": {
+		"formidable": "^1.2.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	}
+}

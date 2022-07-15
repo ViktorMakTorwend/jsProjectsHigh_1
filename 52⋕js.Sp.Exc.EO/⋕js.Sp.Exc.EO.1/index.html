@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.EO.1</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+
+            // by convert 'json' to 'arr' can appear an error
+            try {
+                let arr = getArr('{1,2,3,4,5}');
+                console.log(arr);
+
+            } catch (error) {
+                console.log(error.name);
+                console.log(error.message);
+            }
+      
+        })();
+
+        function getArr(json) {
+            return JSON.parse(json);
+        }
+
+	</script>
+    
+	</body>
+</html>

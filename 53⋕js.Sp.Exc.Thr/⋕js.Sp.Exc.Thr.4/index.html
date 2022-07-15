@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.Thr.4</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+                    
+            function div(a, b) {
+                if (b !== 0) {
+                    return a / b;
+                } else {
+                    throw {name: 'DivisionByZeroError', message: "Don't try divide on zero"};
+                }
+            }
+
+            try {
+                
+                div(5, 0);
+                
+            } catch (error) {
+                console.log(error.name); 
+	            console.log(error.message); 
+            }
+      
+        })();
+
+	</script>
+    
+	</body>
+</html>

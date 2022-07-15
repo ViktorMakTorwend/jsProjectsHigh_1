@@ -1,0 +1,14 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "Task for Trepachev",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Vik Mak",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

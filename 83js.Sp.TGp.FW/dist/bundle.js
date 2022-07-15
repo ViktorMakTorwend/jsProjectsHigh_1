@@ -1,0 +1,1 @@
+let a=15,b=(console.log("a + a"),2),c=(console.log(b+b),30);console.log(c+c);

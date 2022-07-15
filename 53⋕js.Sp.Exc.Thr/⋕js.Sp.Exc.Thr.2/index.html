@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.Thr.2</title>
+	</head>
+	<body>
+
+
+	<script>
+        ;(function (){
+
+            try {
+                throw new TypeError('текст исключения');
+            } catch (error) {
+                console.log(error.name); // 'TypeError'
+                console.log(error.message); // 'текст исключения'
+            }
+      
+        })();
+
+	</script>
+    
+	</body>
+</html>

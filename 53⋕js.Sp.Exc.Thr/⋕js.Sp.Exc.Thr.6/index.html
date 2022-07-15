@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+    <title>⋕js.Sp.Exc.Thr.6</title>
+	</head>
+	<body>
+
+        <div id="product" data-product="яблоко" 
+        data-price="1000" data-amount="5"></div> 
+
+	<script>
+        ;(function (){
+            let product = document.querySelector('#product');
+           
+            function getCost(elem) {
+                if (elem.dataset.price == undefined) {
+                    throw {
+                        name: 'ProductCostError',
+                        message: 'отсутствует цена продукта'
+                    };
+                } 
+                else if (elem.dataset.amount == undefined) {
+                    throw {
+                        name: 'ProductAmountError',
+                        message: 'отсутствует количество продукта'
+                    };
+                }
+                else return elem.dataset.price * elem.dataset.amount;
+            }
+            
+            try {
+                let cost = getCost(product);
+                alert(cost);
+            } 
+            catch (error) {
+                console.log(error.name);
+                console.log(error.message);
+            }
+
+        })();
+
+	</script>
+    
+	</body>
+</html>
